@@ -12,29 +12,6 @@ sat.dragco=2.179;%drag coefficient of satellite
 sat.dragarea=1;%effective area for drag of satellite (square meters)
 sat.inertiamatrix=[10, -5, 0; -5, 15, 0; 0, 0, 5];%MOI Matrix wrt Body Frame about COM
 sat.initialorientation=quaternion([1, 0, 0, 0]);%quaternion of initial orientation of satellite wrt LHLV frame 
-
-%computation
-%{
-[sat.princaxes, sat.diaginertiamatrix]=eig(sat.inertiamatrix);
-i1=sat.diaginertiamatrix(1, 1);
-i2=sat.diaginertiamatrix(2, 2);
-i3=sat.diaginertiamatrix(3, 3);
-disp(i1);
-disp(i2);
-disp(i3);
-disp(sat.princaxes);
-sat.quat_princaxeswrtbody=quaternion(rotm2quat(sat.princaxes));
-disp(sat.quat_princaxeswrtbody);
-sat.omegalvlhx=0;
-sat.omegalvlhy=0;
-sat.omegalvlhz=0;
-sat.omegalvlhquat=quaternion([0, sat.omegalvlhx, sat.omegalvlhy, sat.omegalvlhz]);
-temp1=quatinv(sat.initialorientation)*quatinv(sat.quat_princaxeswrtbody);
-temp2=temp1*sat.omegalvlhquat;
-temp3=temp2*sat.quat_princaxeswrtbody;
-sat.omegaprinc=temp3*sat.initialorientation;
-sat.omegaprincarray=compact(sat.omegaprinc);
-sat.omegaprinc1=sat.omegaprincarray(2);
-sat.omegaprinc2=sat.omegaprincarray(3);
-sat.omegaprinc3=sat.omegaprincarray(4);
-%}
+sat.initialrotationrates=[0, 0, 0];%initial angular velocity of body projected onto the body frame
+sat.rw.moi=1;%MOI of reaction wheel with respect to its axis
+sat.wheel_axis_unitvector=[0, 1, 0];%Unit vector wrt body frame in direction of wheels axis
