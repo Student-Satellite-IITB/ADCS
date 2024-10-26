@@ -1,0 +1,6 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "BMI270")(type "KiCad")(uri "C:/Users/Ameya/Documents/IITBSSP/GitHub/ADCS/Libraries/BMI270/KiCADv6/2024-10-26_15-52-14.kicad_sym")(options "")(descr ""))
+  (lib (name "IIS2MDC")(type "KiCad")(uri "C:/Users/Ameya/Documents/IITBSSP/GitHub/ADCS/Libraries/IIS2MDCTR/KiCADv6/2024-10-26_15-50-43.kicad_sym")(options "")(descr ""))
+  (lib (name "PC104_BUS")(type "KiCad")(uri "C:/Users/Ameya/Documents/IITBSSP/GitHub/ADCS/Libraries/PC104_BUS/ESQ-126-39-G-D.kicad_sym")(options "")(descr ""))
+)

@@ -1,0 +1,917 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "8265c5ce-1106-4d00-9024-d24b84783353")
+	(paper "A4")
+	(lib_symbols
+		(symbol "BMI270:BMI270"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0.508 25.654 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "BMI270"
+				(at 3.81 -2.032 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "BMI270_BOS"
+				(at -7.62 20.32 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "BMI270"
+				(at -7.62 20.32 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at -7.62 20.32 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "BMI270"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "BMI270_BOS BMI270_BOS-M BMI270_BOS-L"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "BMI270_0_1"
+				(pin bidirectional line
+					(at -7.62 20.32 0)
+					(length 7.62)
+					(name "SDO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 33.02 10.16 180)
+					(length 7.62)
+					(name "OCSB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 33.02 12.7 180)
+					(length 7.62)
+					(name "OSDO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 33.02 15.24 180)
+					(length 7.62)
+					(name "CSB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 33.02 17.78 180)
+					(length 7.62)
+					(name "SCX"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 20.32 180)
+					(length 7.62)
+					(name "SDX"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -7.62 17.78 0)
+					(length 7.62)
+					(name "ASDX"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -7.62 15.24 0)
+					(length 7.62)
+					(name "ASCX"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -7.62 12.7 0)
+					(length 7.62)
+					(name "INT1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -7.62 10.16 0)
+					(length 7.62)
+					(name "VDDIO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at -7.62 7.62 0)
+					(length 7.62)
+					(name "GNDIO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at -7.62 5.08 0)
+					(length 7.62)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 33.02 5.08 180)
+					(length 7.62)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 7.62 180)
+					(length 7.62)
+					(name "INT2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "BMI270_1_1"
+				(rectangle
+					(start 0 24.13)
+					(end 25.4 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+		)
+		(symbol "IIS2MDC:IIS2MDCTR"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 25.4 27.94 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "IIS2MDCTR"
+				(at 25.4 25.4 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "LGA-12_2X2X0P7_STM"
+				(at -3.556 25.654 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "IIS2MDCTR"
+				(at 2.032 23.622 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at -7.62 17.78 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "IIS2MDCTR"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "LGA-12_2X2X0P7_STM LGA-12_2X2X0P7_STM-M LGA-12_2X2X0P7_STM-L"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "IIS2MDCTR_0_1"
+				(pin bidirectional line
+					(at -7.62 17.78 0)
+					(length 7.62)
+					(name "SCL/SPC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 58.42 12.7 180)
+					(length 7.62)
+					(name "VDD_IO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 58.42 15.24 180)
+					(length 7.62)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 58.42 17.78 180)
+					(length 7.62)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -7.62 15.24 0)
+					(length 7.62)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 12.7 0)
+					(length 7.62)
+					(name "CS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -7.62 10.16 0)
+					(length 7.62)
+					(name "SDA/SDI/SDO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at -7.62 7.62 0)
+					(length 7.62)
+					(name "C1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at -7.62 5.08 0)
+					(length 7.62)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 58.42 5.08 180)
+					(length 7.62)
+					(name "INT/DRDY"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 58.42 7.62 180)
+					(length 7.62)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 58.42 10.16 180)
+					(length 7.62)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "IIS2MDCTR_1_1"
+				(rectangle
+					(start 0 21.844)
+					(end 50.8 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+		)
+	)
+	(text "MAG"
+		(exclude_from_sim no)
+		(at 96.52 49.53 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+			)
+		)
+		(uuid "1253e397-f0d4-4428-a43b-e07f7af6489b")
+	)
+	(text "SUNSENSORS"
+		(exclude_from_sim no)
+		(at 201.295 64.135 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+			)
+		)
+		(uuid "c298a755-3472-43d3-a988-81e5c4c4a130")
+	)
+	(text "IMU"
+		(exclude_from_sim no)
+		(at 95.25 107.95 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+			)
+		)
+		(uuid "e684f85c-1246-4f4e-9cb2-1de6977ba136")
+	)
+	(text "STARTRACKER"
+		(exclude_from_sim no)
+		(at 199.39 113.03 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+			)
+		)
+		(uuid "fcda3308-0c98-4065-834f-d573d7956d11")
+	)
+	(symbol
+		(lib_id "BMI270:BMI270")
+		(at 81.915 136.525 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f9fd20c1-8623-4f47-96c2-fa55ff74c4d8")
+		(property "Reference" "U3"
+			(at 83.185 111.125 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "BMI270"
+			(at 85.725 138.43 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "BMI270:BMI270_BOS"
+			(at 81.915 136.525 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "BMI270"
+			(at 81.915 136.525 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 81.915 136.525 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "8"
+			(uuid "6c61d2d6-76e8-494b-b080-2c0bece51b3c")
+		)
+		(pin "1"
+			(uuid "f5d97c23-a391-4a7a-8a8f-121fe8065ca0")
+		)
+		(pin "9"
+			(uuid "b8f8cfb9-6d47-4e0a-9dcc-42cf7cb0a305")
+		)
+		(pin "13"
+			(uuid "c30af985-890c-4f58-a1ae-56350c3f9513")
+		)
+		(pin "10"
+			(uuid "55a3403d-505f-4680-88a5-6e8b2c2f0ba7")
+		)
+		(pin "4"
+			(uuid "e76f873f-abd5-468c-9e5b-156987049f3d")
+		)
+		(pin "5"
+			(uuid "020dc3b7-1430-4358-92ad-34134c629ad3")
+		)
+		(pin "11"
+			(uuid "b263fb65-cdc8-47c7-9e78-ba1298c7ba37")
+		)
+		(pin "2"
+			(uuid "404ec7fc-216c-44c6-9ea8-520fc1372352")
+		)
+		(pin "12"
+			(uuid "8adbc3a9-861f-4b77-a059-e3ae9d5d6244")
+		)
+		(pin "6"
+			(uuid "8ac0af0a-abdb-425d-bc0f-ab925c3e4119")
+		)
+		(pin "3"
+			(uuid "86a209cc-3982-49a6-a819-65d4253df199")
+		)
+		(pin "7"
+			(uuid "a8d8aac6-6435-47b3-b6ba-1fd3edc57e1f")
+		)
+		(pin "14"
+			(uuid "5b0a00e5-f20c-4cd6-84cf-a5ca3d9302be")
+		)
+		(instances
+			(project "ADCS"
+				(path "/750e0520-5427-4317-868f-58df8acbad9c/133f569b-b7ca-48dd-a2a8-5a0711382e81"
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "IIS2MDC:IIS2MDCTR")
+		(at 80.01 74.93 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fd828b82-8a0d-4eca-bf92-22132139df11")
+		(property "Reference" "U2"
+			(at 81.28 51.435 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "IIS2MDCTR"
+			(at 85.725 76.835 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "IIS2MDC:LGA-12_2X2X0P7_STM"
+			(at 80.01 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "IIS2MDCTR"
+			(at 80.01 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 80.01 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "9"
+			(uuid "de126b92-1c71-4ae7-99c1-4170abc707cb")
+		)
+		(pin "6"
+			(uuid "5fb7ba66-4742-4b7c-98fc-92e855c81ff1")
+		)
+		(pin "8"
+			(uuid "ed85088f-de77-44b8-9d09-864a9b069fef")
+		)
+		(pin "5"
+			(uuid "e1308e4f-e7f0-4c89-9e21-3e96c7229672")
+		)
+		(pin "4"
+			(uuid "23df21e5-7e14-4353-9995-ffca939c7e7f")
+		)
+		(pin "2"
+			(uuid "0a34e30c-5f32-417f-a849-47bf6ae1bab2")
+		)
+		(pin "11"
+			(uuid "56e8a730-5007-4248-93e5-2e72780e7bd7")
+		)
+		(pin "10"
+			(uuid "f238b489-6c35-441e-aa9a-8645a14f0f77")
+		)
+		(pin "7"
+			(uuid "e10588e9-fcff-43fa-8539-52ffd3d702d9")
+		)
+		(pin "1"
+			(uuid "42c87106-9043-4300-8e21-113bb3150424")
+		)
+		(pin "3"
+			(uuid "7c70bf79-1f74-41e9-a5f6-a89b9fc4d1c8")
+		)
+		(pin "12"
+			(uuid "563a307c-2789-4511-9bbc-989a94c0f2f2")
+		)
+		(instances
+			(project "ADCS"
+				(path "/750e0520-5427-4317-868f-58df8acbad9c/133f569b-b7ca-48dd-a2a8-5a0711382e81"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

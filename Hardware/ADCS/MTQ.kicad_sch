@@ -1,0 +1,525 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "f549bef3-7d95-40ad-8c04-178ed080d88e")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Driver_Motor:DRV8212P"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 6.35 11.43 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "DRV8212P"
+				(at -10.16 11.43 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_SON:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm_ThermalVias"
+				(at 0 -21.59 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/drv8212p.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "H-Bridge driver, 4A, Low Voltage, PWM input, WSON-8"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "half bridge driver"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "WSON*1EP*2x2mm*P0.5mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "DRV8212P_0_1"
+				(rectangle
+					(start -7.62 10.16)
+					(end 7.62 -10.16)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "DRV8212P_1_1"
+				(pin power_in line
+					(at 0 12.7 270)
+					(length 2.54)
+					(name "VM"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 7.62 180)
+					(length 2.54)
+					(name "OUT1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 -7.62 180)
+					(length 2.54)
+					(name "OUT2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -12.7 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name "IN2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "IN1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name "~{SLEEP}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 12.7 270)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -12.7 90)
+					(length 2.54) hide
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Driver_Motor:DRV8212P")
+		(at 120.015 54.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0f61eb56-ae29-462f-86a0-0e08da53b75b")
+		(property "Reference" "U5"
+			(at 122.2091 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DRV8212P"
+			(at 122.2091 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm_ThermalVias"
+			(at 120.015 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/drv8212p.pdf"
+			(at 120.015 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "H-Bridge driver, 4A, Low Voltage, PWM input, WSON-8"
+			(at 120.015 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "481feb35-764e-47f3-bf73-78417a4ce0d3")
+		)
+		(pin "9"
+			(uuid "1a7d9e8d-393c-473d-96cb-22602689d4a1")
+		)
+		(pin "2"
+			(uuid "a68fb893-b781-463f-8c53-d05699f50a32")
+		)
+		(pin "7"
+			(uuid "a1925735-e4ff-4928-8e1d-c1020f2b0e13")
+		)
+		(pin "1"
+			(uuid "02ce70fa-e759-4398-9260-f93a94a34299")
+		)
+		(pin "6"
+			(uuid "c6bb07b0-3b40-4dda-8f56-13c4224ecdae")
+		)
+		(pin "8"
+			(uuid "27e66a1a-1fd1-4722-8a77-e2ae29ea8372")
+		)
+		(pin "5"
+			(uuid "835bf81c-aaee-4f65-b755-e91036b382a4")
+		)
+		(pin "4"
+			(uuid "6b136e43-eaa8-4c0a-80ef-3db279cd50d2")
+		)
+		(instances
+			(project ""
+				(path "/750e0520-5427-4317-868f-58df8acbad9c/821e4543-54d8-4442-9a5b-885d0331c4c0"
+					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Driver_Motor:DRV8212P")
+		(at 121.285 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3a0c2550-c529-44ad-9bcd-06ad94f14732")
+		(property "Reference" "U7"
+			(at 123.4791 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DRV8212P"
+			(at 123.4791 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm_ThermalVias"
+			(at 121.285 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/drv8212p.pdf"
+			(at 121.285 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "H-Bridge driver, 4A, Low Voltage, PWM input, WSON-8"
+			(at 121.285 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "946fcb93-00f8-455a-a3e7-23ecb1a9aaee")
+		)
+		(pin "9"
+			(uuid "dda0fba7-fe6e-480a-9ed3-1fe253726c55")
+		)
+		(pin "2"
+			(uuid "67199a0f-dfd6-4f64-ab2f-1c78d06cadfe")
+		)
+		(pin "7"
+			(uuid "6c49bb77-e0e6-4b6c-aab9-cf7d9a857a2e")
+		)
+		(pin "1"
+			(uuid "929107d6-47de-458d-b39b-bd36dd9a55e0")
+		)
+		(pin "6"
+			(uuid "3ee00497-8e92-49b8-9def-a6f9f4c58a93")
+		)
+		(pin "8"
+			(uuid "536fead2-cf86-42ef-9bf2-28ae293e7573")
+		)
+		(pin "5"
+			(uuid "3f921f3e-c9de-4898-9e3a-6af9ccc7e1c3")
+		)
+		(pin "4"
+			(uuid "71d2aa74-c7f2-45f8-a99f-436d48ac7a95")
+		)
+		(instances
+			(project "ADCS"
+				(path "/750e0520-5427-4317-868f-58df8acbad9c/821e4543-54d8-4442-9a5b-885d0331c4c0"
+					(reference "U7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Driver_Motor:DRV8212P")
+		(at 121.285 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ef718289-3e7a-49e0-8c13-af791c39855e")
+		(property "Reference" "U6"
+			(at 123.4791 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DRV8212P"
+			(at 123.4791 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm_ThermalVias"
+			(at 121.285 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/drv8212p.pdf"
+			(at 121.285 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "H-Bridge driver, 4A, Low Voltage, PWM input, WSON-8"
+			(at 121.285 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "b5e3913b-b537-40d5-8ded-ec39f91755a7")
+		)
+		(pin "9"
+			(uuid "303694ac-8d1f-4a4e-a371-a6e72c1e5e28")
+		)
+		(pin "2"
+			(uuid "0422b4dd-2ea3-46da-b1d4-ddb9644e39d0")
+		)
+		(pin "7"
+			(uuid "9d1c97a9-499a-4f29-94c7-c94e1902e1e4")
+		)
+		(pin "1"
+			(uuid "ceee798e-27e7-4ebb-9381-3099b6b0b095")
+		)
+		(pin "6"
+			(uuid "ad78e875-6697-46ae-b151-10f51d786e3a")
+		)
+		(pin "8"
+			(uuid "bca18f3f-b459-4c5b-8ed2-0be8fd113dfc")
+		)
+		(pin "5"
+			(uuid "d8537d9f-434d-4439-ad3b-28b5a20be7e2")
+		)
+		(pin "4"
+			(uuid "cc6b1074-7c00-4443-9cd9-093cbec59cbc")
+		)
+		(instances
+			(project "ADCS"
+				(path "/750e0520-5427-4317-868f-58df8acbad9c/821e4543-54d8-4442-9a5b-885d0331c4c0"
+					(reference "U6")
+					(unit 1)
+				)
+			)
+		)
+	)
+)
