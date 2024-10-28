@@ -5,4 +5,29 @@
 	(uuid "b50b39ce-ec7f-4015-9b5e-4b42b0bbf890")
 	(paper "A4")
 	(lib_symbols)
+	(text "ADCS RWS"
+		(exclude_from_sim no)
+		(at 20.32 25.4 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 0.508)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "a0de0de8-cdda-4671-b5d6-56adeaa577e9")
+	)
+	(text "AMEYA MARAKARKANDY"
+		(exclude_from_sim no)
+		(at 20.955 31.115 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "d997b035-fa2d-4ed6-996d-6470d4973168")
+	)
 )
