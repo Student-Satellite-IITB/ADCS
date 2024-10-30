@@ -15546,7 +15546,7 @@
 		)
 		(uuid "d89944c7-5ceb-47db-9af2-0577471938dd")
 	)
-	(text "M2"
+	(text "M3"
 		(exclude_from_sim no)
 		(at 335.915 60.325 0)
 		(effects

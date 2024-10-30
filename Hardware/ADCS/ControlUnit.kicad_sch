@@ -16316,7 +16316,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "635818e4-12b2-4f2d-bd40-98a8e82e811f")
 		(property "Reference" "#PWR055"
 			(at 308.61 107.95 0)
@@ -16328,7 +16327,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 313.69 104.775 90)
+			(at 308.61 107.95 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18954,7 +18953,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "f9231d33-0494-4f8f-a46e-ab93dae13b1a")
 		(property "Reference" "#PWR051"
 			(at 309.245 78.105 0)
@@ -18966,7 +18964,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 314.325 74.295 90)
+			(at 310.515 77.47 90)
 			(effects
 				(font
 					(size 1.27 1.27)

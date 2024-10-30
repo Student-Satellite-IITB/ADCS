@@ -2052,6 +2052,16 @@
 		)
 		(uuid "7276751e-1aa4-476c-a7ed-bc3cb917cfaa")
 	)
+	(text "MOLEX PICO LOCK"
+		(exclude_from_sim no)
+		(at 198.12 154.432 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "a32b68be-7d3e-42a0-85fa-60a2bc685f2b")
+	)
 	(text "ADCS SENSORS"
 		(exclude_from_sim no)
 		(at 17.145 23.495 0)

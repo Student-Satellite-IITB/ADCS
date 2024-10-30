@@ -5,4 +5,5 @@
   (lib (name "PC104_BUS")(type "KiCad")(uri "C:/Users/Ameya/Documents/IITBSSP/GitHub/ADCS/Libraries/PC104_BUS")(options "")(descr ""))
   (lib (name "TPS3824")(type "KiCad")(uri "C:/Users/Ameya/Documents/IITBSSP/GitHub/ADCS/Libraries/TPS3824/footprints.pretty")(options "")(descr ""))
   (lib (name "SN65HVD")(type "KiCad")(uri "C:/Users/Ameya/Documents/IITBSSP/GitHub/ADCS/Libraries/SN65HVD256D/KiCADv6/footprints.pretty")(options "")(descr ""))
+  (lib (name "MTQ")(type "KiCad")(uri "C:/Users/Ameya/Documents/IITBSSP/GitHub/ADCS/Libraries/MTQ.pretty")(options "")(descr ""))
 )
