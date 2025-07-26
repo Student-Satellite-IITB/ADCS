@@ -1,7 +1,7 @@
 %% CUBESAT Parameters
 
 % Author: Ameya Marakarkandy
-% Last Updated: 15/08/2024
+% Last Updated: 24/07/2025
 %
 % @brief 
 % Initialises parameters needed for
@@ -10,11 +10,11 @@
 %% Physical parameters
 
 % Satellite mass
-sat.mass = 4;
+sat.mass = 4.5;
 % Inertia Matrix
-sat.Jx = 0.003;
-sat.Jy = 0.007;
-sat.Jz = 0.008;
+sat.Jx = 0.035;
+sat.Jy = 0.035;
+sat.Jz = 0.0075;
 sat.Jxz = 0;
 sat.Jxy = 0;
 sat.Jyz = 0;
@@ -39,59 +39,27 @@ sat.T = 2*pi/sat.n;
 
 %% Actuator Parameters
 
-% % Magnetorquers
-% mtq.Nx = 100;
-% mtq.Ax = 0.01;
-% mtq.Lx = 10;
-% mtq.Rx = 10;
-% 
-% mtq.Ny = 100;
-% mtq.Ay = 0.01;
-% mtq.Ly = 10;
-% mtq.Ry = 10;
-% 
-% mtq.Nz = 100;
-% mtq.Az = 0.01;
-% mtq.Lz = 10;
-% mtq.Rz = 10;
-
 % Reaction Wheels
 % Reaction Wheel Inertia about axis
-Js = 0.001;
+Js = 9e-6;
 ws0 = 0; % Initial wheel speed
+% 3-axis configuration
+A = eye(3); % aligned with body axis
+
+% Tetrahedral configuration
 % B = deg2rad(30);
 % A = [sin(B),0,-sin(B),0;
 %     0,sin(B),0,-sin(B);
 %     cos(B),cos(B),cos(B),cos(B)];
-A = eye(3);
-
-%% Sensor Parameters
-% Inertial Measurement Unit
-% Magnetometer
-% Sun sensors
-% GNSS Reciever
-% Star Tracker
 
 %% Initial Conditions
 
-% omega B wrt O in B-frame
-sat.p = 0;
-sat.q = 0;
-sat.r = 0;
-sat.omegaBO = [sat.p;sat.q;sat.r];
-
-sat.omegaON = [0;-sat.n;0];
-
-% omega B wrt N in B-frame
-sat.w1 = 0 +sat.p;
-sat.w2 = -sat.n+sat.q;
-sat.w3 = 0+ sat.r;
-sat.omegaBN = [sat.w1;sat.w2;sat.w3];
-
+% Initial Attitude
 initAngle = deg2rad(0);
 initAxis = [0;0;0];
 sat.quat = [cos(initAngle/2);sin(initAngle/2)*initAxis];
 %sat.quat = [0;0;1;0];
 
-%% TESTING
-omega = [0;0;sat.n]; % in MATLAB LVLH frame
+% Initial Angular Rate
+% omega B wrt N in B-frame
+sat.omegaBN = [0;0;0];

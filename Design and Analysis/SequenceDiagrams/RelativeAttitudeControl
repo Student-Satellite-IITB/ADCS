@@ -1,0 +1,53 @@
+@startuml RelativeAttitudeControl
+title Relative Attitude Control
+
+
+participant "RPOD-M" as RPOD
+participant "OBC" as OBC
+participant "ADCS" as ADCS
+participant "COMM" as COMM
+
+
+== ADCS (FINE_REF_POINT Mode) ==
+loop Telemetry Update
+  loop Guidance Loop
+    OBC -> OBC: Computing Desired \nInertial Attitude State
+    OBC -> ADCS: Attitude Reference Guidance Command
+    loop Control Loop
+      ADCS -> ADCS: Attitude Estimation
+      ADCS -> ADCS: Attitude Control
+      note left of ADCS: Absolute Attitude\n Reference Tracking
+    end
+  end
+  ADCS -> OBC: ADCS Telemetry
+end
+
+== Stationkeeping SK1 Mode ==
+OBC -> RPOD: Command: Start Relative Pose Estimation
+RPOD -> OBC: Telemetry: VBN Lock Acquired
+alt Absolute Attitude Guidance
+  loop Relative Attitude Control
+    RPOD -> RPOD: Relative Pose Estimation
+    RPOD -> OBC: Relative Pose
+    OBC -> OBC: Computing Desired\n Inertial Attitude Stationkeeping
+    loop OBC Guidance Loop
+      OBC -> OBC: Computing Desired \nInertial Attitude State
+      OBC -> ADCS: Attitude Reference Guidance Command
+      loop ADCS Attitude Control Loop
+        ADCS -> ADCS: Attitude Estimation
+        ADCS -> ADCS: Attitude Control
+        note left of ADCS: Absolute Attitude\n Reference Tracking
+      end
+    end
+  end
+else Direct Relative Attitude Open-Loop Control
+  OBC -> ADCS: Command: Start Open-Loop Control
+  RPOD -> OBC: Relative Pose
+  OBC -> ADCS: Relative Pose
+  loop ADCS Open-Loop Control
+    ADCS->ADCS: Attitude Control
+    note left of ADCS: Open-Loop like control\n taking OBC Reference as Error
+  end
+  
+end
+@enduml

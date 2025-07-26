@@ -1,0 +1,115 @@
+@startuml InitialBootUp_SequenceDiagram
+title Initial Bootup and Transition to Operations
+
+participant "EPS" as EPS
+participant "COMM" as COMM
+participant "OBC" as OBC
+participant "ADCS" as ADCS
+
+== Deployment ==
+note over EPS, ADCS: Deployment Detected
+EPS -> EPS: Start Deployment Timer
+...45 minutes later...
+EPS -> COMM: Antenna Deployment
+EPS -> ADCS: Power Supply Enable
+ADCS -> ADCS: Internal Boot Sequence
+
+== Detumbling Phase ==
+
+note right of ADCS: Checks tipoff angular rates starts Detumbling
+ADCS -> ADCS: Detumbling
+ADCS -> OBC: Telemetry: Mode = DETUMBLING
+OBC -> COMM: Telemetry: ADCS Mode = DETUMBLING
+
+== SUN_POINT Mode ==
+note right of ADCS: Shifts to SUN_POINT mode \n on completion of detumbling
+ADCS -> ADCS: Start SUN_POINT Sequence
+ADCS -> OBC: Telemetry: Mode = SUN_POINT
+OBC -> COMM: Telemetry: ADCS Mode = SUN_POINT
+
+== Readiness for Reference Pointing Modes ==
+OBC -> ADCS: Command: Set Ephemeris
+OBC -> ADCS: Command: Set Time
+
+== Star Tracker Testing ==
+OBC -> ADCS: Initiate Star Tracker Testing Sequence
+note left of OBC: Star Tracker Testing\n only initiated in first boot\n or on GSS Command
+ADCS -> ADCS: Star Tracker Testing Sequence
+ADCS -> OBC: Telemetry: Star Tracker Status == TRUE or FALSE
+
+
+alt Star Tracker Success AND Valid Time/Ephemeris
+    ADCS -> OBC: Telemetry: Initial Quaternion == [q]
+    OBC -> COMM: Telemetry: Star Tracker Initial Quaternion == [q]
+    ADCS -> ADCS: Initialize Fine Attitude Filter \n Wait for filter convergence
+    
+    alt Converged
+      ADCS -> OBC: Telemetry: AttitudeValid == TRUE
+      == FINE_REF_POINT Mode ==
+      ... Waits for OBC Command...
+      OBC -> ADCS: Command: Start Fine Ref Point Mode
+      note right of ADCS: The ADCS starts attitude reference tracking \n using high-accuracy sensor suite
+      ADCS -> OBC: Telemetry:D Mode = FINE_REF_POINT
+      OBC -> COMM: Telemetry: ADCS Mode = FINE_REF_POINT
+    
+      loop every TLM_UPDATE_RATE ms
+        loop every GUIDANCE_UPDATE_RATE ms
+          OBC -> ADCS: Attitude Reference Guidance Command
+          loop every CONTROL_UPDATE_RATE ms
+            ADCS -> ADCS: Attitude Control
+          end
+        end
+        ADCS -> OBC: ADCS Telemetry
+      end
+      note over EPS, ADCS: Continue Nominal Mission ConOps
+      
+    else Timeout OR Divergence
+      ADCS -> OBC: Telemetry: AttitudeValid == FALSE
+      OBC -> COMM: Telemetry: Fine Attitude Estimator Convergence Failed
+      note right of ADCS: ADCS Remains in SUN_POINT Mode
+      loop every TLM_UPDATE_RATE ms
+          loop every CONTROL_UPDATE_RATE ms
+            ADCS -> ADCS: Estimate Coarse Attitude\n Sun-Pointing Control
+          end
+        ADCS -> OBC: ADCS Telemetry
+      end
+    end
+    
+else Star Tracker Failure AND Valid Time/Ephemeris
+    OBC -> COMM: Telemetry: Star Tracker Test Failed
+    note right of ADCS: ADCS Remains in SUN_POINT Mode
+    loop every TLM_UPDATE_RATE ms
+          loop every CONTROL_UPDATE_RATE ms
+            ADCS -> ADCS: Estimate Coarse Attitude\n Sun-Pointing Control
+          end
+        ADCS -> OBC: ADCS Telemetry
+    end
+    
+    == NOMINAL_REF_POINT Mode ==
+    ... Wait for Ground Command ...
+    COMM -> OBC: Command: Shift to Nominal Attitude Reference Pointing Mode
+    note left of OBC: GS Commands shift to nominal atittude reference pointing \n as a fallback measure to continue the mission \n with degraded performance
+    OBC -> ADCS: Command: Shift to NOMINAL_REF_POINT
+    note right of ADCS: The ADCS starts attitude reference tracking \n using low-accuracy sensor suite \n as a fallback measure
+    ADCS -> OBC: Telemetry: Mode = NOMINAL_REF_POINT
+    OBC -> COMM: Telemetry: ADCS Mode = NOMINAL_REF_POINT
+      loop every TLM_UPDATE_RATE ms
+        loop every GUIDANCE_UPDATE_RATE ms
+          OBC -> ADCS: Attitude Reference Guidance Command
+          loop every CONTROL_UPDATE_RATE ms
+            ADCS -> ADCS: Attitude Control
+          end
+        end
+        ADCS -> OBC: ADCS Telemetry
+      end
+else Invalid Time/Ephemeris
+    note right of ADCS: ADCS Remains in SUN_POINT Mode
+      loop every TLM_UPDATE_RATE ms
+          loop every CONTROL_UPDATE_RATE ms
+            ADCS -> ADCS: Estimate Coarse Attitude\n Sun-Pointing Control
+          end
+        ADCS -> OBC: ADCS Telemetry
+      end
+end
+
+@enduml
